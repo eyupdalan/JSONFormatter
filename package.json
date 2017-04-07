@@ -19,7 +19,7 @@
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --autoWatch=true --singleRun=false --reporters=mocha,coverage",
     "heroku-prebuild": "npm install",
-    "start": "npm run copy && webpack --progress --bail --env dist -p && npm run serve:dist"
+    "start": "npm run serve:dist"
   },
   "repository": "",
   "keywords": [],
