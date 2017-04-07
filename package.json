@@ -14,7 +14,6 @@
     "release:minor": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
     "release:patch": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
     "serve:dev": "webpack-dev-server --open --env dev",
-    "serve:dist": "webpack --env dist -p --progress",
     "start-dev": "npm run serve:dev",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --autoWatch=true --singleRun=false --reporters=mocha,coverage",
