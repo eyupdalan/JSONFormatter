@@ -14,12 +14,12 @@
     "release:minor": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
     "release:patch": "npm version prerelease && git push --follow-tags && npm publish --tag beta",
     "serve:dev": "webpack-dev-server --open --env dev",
-    "serve:dist": "webpack-dev-server --open --env dist -p --progress",
+    "serve:dist": "webpack --env dist -p --progress",
     "start-dev": "npm run serve:dev",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --autoWatch=true --singleRun=false --reporters=mocha,coverage",
     "heroku-prebuild": "npm install",
-    "start": "npm run serve:dist"
+    "start": "node server.js"
   },
   "repository": "",
   "keywords": [],
@@ -70,6 +70,7 @@
   "dependencies": {
     "copyfiles": "^1.2.0",
     "cross-env": "^3.1.0",
+    "express": "^4.15.2",
     "react": "^15.0.1",
     "react-dom": "^15.0.1",
     "react-hot-loader": "^3.0.0-beta.6",
